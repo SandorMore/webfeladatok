@@ -45,7 +45,7 @@ kezdesEl.addEventListener("click", start);
 
 function start() {
     if (nameList.length < 2) {
-        alert("Több név szükséges a játékhoz!");  
+        alert("egynel tobb nev kell!");  
         return;
     }
     shuffledNames = shuffleNames([...nameList, ...nameList]);
