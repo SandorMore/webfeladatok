@@ -1,6 +1,10 @@
 const buttonEl = document.getElementById("submit")
-const containerEl = document.getElementById("markolo")
+const markoloEl = document.getElementById("markolo")
+const inputEL = document.getElementById("input")
 function buttonClicked(){
     let newelement = document.createElement("div")
-    containerEl.appendChild(newelement)
-}
+    let newelement2 = document.createElement("h1")
+    newelement2.innerText = inputEL.innerText
+    markoloEl.appendChild(newelement)
+    newelement.appendChild(newelement2)
+}   
