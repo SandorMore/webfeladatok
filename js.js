@@ -16,3 +16,13 @@ function buttonClicked(){
         alert("Nem adtál meg adatot!")
     }
 }   
+for(let i = 0; i <= markoloEl.length; i++)
+{
+    names = []
+    let currentEl = i.value
+    names.push(currentEl)
+    
+}
+function getNamesOut(names){
+
+}
