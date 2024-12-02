@@ -11,15 +11,16 @@ fetch(API_URL)
 })
 
 function generateQuestion(question){
+    
     let questionText = document.createElement("h1")
     questionText.innerHTML = question.question
 
     let correct = question.correct_answer
-    let incorrect = question.incorrect_answer
+    let incorrect = question.incorrect_answers
     // deconstruction
     let answers = [correct, ...incorrect]
 
-    answers.sort(() => Math.random() * 2)
+    answers.sort(() => Math.random() * 2 -1)
 
     console.log(answers)
 }
