@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5500/quiz/api.json"
+const API_URL = "http://localhost:5500/quiz/api.json"
 
 const gameRootEl = document.getElementById("gameRoot")
 
@@ -7,7 +7,7 @@ const gameRootEl = document.getElementById("gameRoot")
 fetch(API_URL)
 .then(valasz => valasz.json())
 .then(atalakitott => {
-    console.log(atalakitott.results[0])
+    generateQuestion(atalakitott.results[0])
 })
 
 function generateQuestion(question){
@@ -19,5 +19,7 @@ function generateQuestion(question){
     // deconstruction
     let answers = [correct, ...incorrect]
 
+    answers.sort(() => Math.random() * 2)
 
+    console.log(answers)
 }
