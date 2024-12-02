@@ -10,8 +10,8 @@ fetch(API_URL)
     generateQuestion(atalakitott.results[questionIdx])
 })
 
-function generateQuestion(question){
-    
+function generateQuestion(questions){
+    let question = questions[questionIdx]
     let questionText = document.createElement("h1")
     questionText.innerHTML = question.question
     gameRootEl.appendChild(questionText)
