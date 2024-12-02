@@ -2,12 +2,12 @@ const API_URL = "http://localhost:5500/quiz/api.json"
 
 const gameRootEl = document.getElementById("gameRoot")
 
-
+let questionIdx = 0
 
 fetch(API_URL)
 .then(valasz => valasz.json())
 .then(atalakitott => {
-    generateQuestion(atalakitott.results[0])
+    generateQuestion(atalakitott.results[questionIdx])
 })
 
 function generateQuestion(question){
@@ -30,9 +30,15 @@ function generateQuestion(question){
         gameRootEl.appendChild(btn)
 
         btn.addEventListener("click", () =>{
-            if(answer === question.correct_answer){
-                
+            if(answer === correct){
+                btn.style.background = "green"
+
+            }else{
+                btn.style.background = "red"
             }
+            setTimeout(() =>{
+                
+            }, 2000)
         })
     })
 }
