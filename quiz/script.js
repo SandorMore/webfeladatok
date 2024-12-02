@@ -37,7 +37,9 @@ function generateQuestion(questions){
                 btn.style.background = "red"
             }
             setTimeout(() =>{
-                
+                gameRootEl.innerHTML = ""
+                questionIdx++
+                generateQuestion(questions)
             }, 2000)
         })
     })
