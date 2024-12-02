@@ -14,7 +14,7 @@ function generateQuestion(question){
     
     let questionText = document.createElement("h1")
     questionText.innerHTML = question.question
-
+    gameRootEl.appendChild(questionText)
     let correct = question.correct_answer
     let incorrect = question.incorrect_answers
     // deconstruction
@@ -23,4 +23,16 @@ function generateQuestion(question){
     answers.sort(() => Math.random() * 2 -1)
 
     console.log(answers)
+
+    answers.forEach(answer => {
+        let btn = document.createElement("button")
+        btn.innerHTML = answer
+        gameRootEl.appendChild(btn)
+
+        btn.addEventListener("click", () =>{
+            if(answer === question.correct_answer){
+                
+            }
+        })
+    })
 }
